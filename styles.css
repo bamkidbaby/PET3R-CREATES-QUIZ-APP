@@ -1,0 +1,135 @@
+:root {
+    /* Primary Colors */
+    --color-primary: #2196F3;
+    /* Blue */
+    --color-secondary: #BBDEFB;
+    /* Light Blue */
+    --color-success: #4CAF50;
+    /* Green */
+    --color-error: #F44336;
+    /* Red */
+    --color-accent: #FFEB3B;
+    /* Yellow */
+
+    /* Neutral Colors */
+    --color-bg: #F9F9F9;
+    /* Light Gray background */
+    --color-text: #333333;
+    /* Dark Gray text */
+    --color-subtext: #757575;
+    /* Secondary text / disabled */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--color-bg);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.app {
+    background: #fff;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.app h1 {
+    font-size: 13px;
+    color: var(--color-subtext);
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+}
+
+.app span {
+    font-size: 25px;
+    color: var(--color-text);
+}
+
+.quiz {
+    padding: 20px 0;
+}
+
+.quiz h2 {
+    font-size: 18px;
+    color: #333;
+    font-weight: 600;
+}
+
+.answer-buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-weight: 700;
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover:not([disabled]) {
+    background: #22222254;
+    transform: translateY(-5px);
+}
+
+.btn:disabled {
+    cursor: no-drop;
+}
+
+#next-btn {
+    background: #07bd01;
+    color: #fff;
+    font-weight: 50;
+    width: 150px;
+    border: 0;
+    padding: 15px;
+    margin: 20px auto 0;
+    border-radius: 15px;
+    cursor: pointer;
+    display: none;
+    transition: 0.3s ease;
+}
+
+#next-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
+.btn i {
+    margin-right: 8px;
+}
+
+.btn.correct {
+    background-color: var(--color-success);
+    color: #fff;
+}
+
+.btn.incorrect {
+    background-color: var(--color-error);
+    color: #fff;
+}
+
+/* SCORE PAGE STYLING */
+#question.scored {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 30px;
+}
